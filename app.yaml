@@ -5,15 +5,13 @@ metadata:
   namespace: argocd
 spec:
   source:
-    repoURL: <git_repository_url>
-    targetRevision: <git_revision>
-    path: <path_to_application_directory>
+    repoURL: https://github.com/tomer1/testArgoCd
     helm:
       valueFiles:
         - values.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: my-namespace
+    namespace: argocd
   project: default
   syncPolicy:
     automated:
